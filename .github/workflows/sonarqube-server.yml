@@ -43,7 +43,6 @@ jobs:
           SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar /
           -f sonar-scanner-maven/maven-basic/pom.xml
-          -Dsonar.sources=sonar-scanner-maven/maven-basic/src /
           -Dsonar.verbose=true /
           -Dsonar.projectKey=onboarding-examples-sonarqube_maven-example /
           -Dsonar.projectName=onboarding-examples-gh_sonarqube_maven-example /
