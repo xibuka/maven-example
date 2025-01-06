@@ -12,6 +12,7 @@ on:
       types: [opened, synchronize, reopened]
   workflow_dispatch:
 
+name: SonarQube-Server
 jobs:
   build:
     name: Build
