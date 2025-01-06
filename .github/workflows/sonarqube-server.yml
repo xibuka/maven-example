@@ -2,7 +2,7 @@ on:
   # Trigger analysis when pushing to your main branches, and when creating a pull request.
   push:
     paths:
-      - 'src/**'
+      - 'sonar-scanner-maven/maven-basic/**'
     branches:
       - main
       - master
@@ -40,5 +40,5 @@ jobs:
       - name: Build and analyze
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.sources=sonar-scanner-maven/maven-basic -Dsonar.verbose=true
