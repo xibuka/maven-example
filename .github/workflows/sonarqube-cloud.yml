@@ -45,6 +45,7 @@ jobs:
           run: |
             ORG_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
             PROJECT_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
+            echo "ORG_NAME: $ORG_NAME"
             mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
             -f sonar-scanner-maven/maven-basic/pom.xml 
             -Dsonar.verbose=true 
