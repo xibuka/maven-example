@@ -46,9 +46,8 @@ jobs:
             ORG_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
             PROJECT_NAME=$(echo $GITHUB_REPOSITORY | cut -d'/' -f2)
             echo "ORG_NAME: $ORG_NAME"
-            mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -X \
             -f sonar-scanner-maven/maven-basic/pom.xml \
-            -Dsonar.verbose=true \
             -Dsonar.projectKey=$ORG_NAME-gh_$PROJECT_NAME \
             -Dsonar.projectName=$ORG_NAME-gh_$PROJECT_NAME \
             -Dsonar.organization=github-onboarding-examples \
