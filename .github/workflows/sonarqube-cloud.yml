@@ -41,12 +41,12 @@ jobs:
           env:
             SONAR_TOKEN: ${{ secrets.SONARQUBE_CLOUD_TOKEN }}
             SONAR_HOST_URL: ${{ vars.SONAR_CLOUD_HOST_URL }}
-          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-            -f sonar-scanner-maven/maven-basic/pom.xml \
-            -Dsonar.verbose=true \
-            -Dsonar.projectKey=oonboarding-examples-sonarqube_maven-example \
-            -Dsonar.projectName=onboarding-examples-gh_sonarqube_maven-example \
-            -Dsonar.organization=github-onboarding-examples \
+          run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar 
+            -f sonar-scanner-maven/maven-basic/pom.xml 
+            -Dsonar.verbose=true 
+            -Dsonar.projectKey=oonboarding-examples-sonarqube_maven-example 
+            -Dsonar.projectName=onboarding-examples-gh_sonarqube_maven-example 
+            -Dsonar.organization=github-onboarding-examples 
             -Dsonar.projectBaseDir=sonar-scanner-maven/maven-basic/ 
             
   
