@@ -46,6 +46,7 @@ jobs:
             -Dsonar.verbose=true \
             -Dsonar.projectKey=oonboarding-examples-sonarqube_maven-example \
             -Dsonar.projectName=onboarding-examples-gh_sonarqube_maven-example \
-            -Dsonar.projectBaseDir=sonar-scanner-maven/maven-basic/ \
-            -Dsonar.organization=github-onboarding-examples
+            -Dsonar.organization=github-onboarding-examples \
+            -Dsonar.projectBaseDir=sonar-scanner-maven/maven-basic/ 
+            
   
