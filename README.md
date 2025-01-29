@@ -1,7 +1,7 @@
 ## Overview
 
-This project is an example of using Azure DevOps for a java/maven project. It demonstrates how to set up a CI/CD pipeline for a java/maven application.  
-We have multiple CI/CD Pipeline examples, one for running the SonarScanner and sending the results to SonarQube Server and the other for sending the results to SonarQube Cloud.  
+This repository is an example of setting up the SonarScanner Analysis with GitHub Actions pipeline for a java/maven project.  
+We have multiple CI/CD Pipeline examples, one for connecting to SonarQube Server instance and the other to SonarQube Cloud instance.   
 
 __**PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTIONS PIPELINES**__  
 [GitHub Actions Workflow with SonarQube Scanner](https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/adding-analysis-to-github-actions-workflow/)  
