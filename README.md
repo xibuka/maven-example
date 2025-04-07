@@ -16,6 +16,14 @@ __**PLEASE READ OUR SONARQUBE DOCUMENTATION FOR WORKING WITH GITHUB ACTIONS PIPE
 - For both `sonar.projectKey` and `sonarprojectName`, we are using the following `$(echo ${{ github.repository }} | cut -d'/' -f1)-gh_$(echo ${{ github.repository }}` as naming convention. This results in `OrgName-gh_RepoName`.  
 - Please make sure you have set up your `SONAR_TOKEN` and `SONAR_HOST_URL` secrets or variables. In the command used, `SONAR_TOKEN` is set up as a secret and `SONAR_HOST_URL` is set a variable. If set up differently please change the prefix in the respective parameter.
 - If your Java project is using a different version than the one executing the analysis. Please check [Project's specific JDK](https://docs.sonarsource.com/sonarqube-server/latest/analyzing-source-code/languages/java/#project-specific-jdk).  
+- In the example we have the Sonar Maven plugin version specified in the `pom.xml` file under the following plugin setting.  
+``` sh
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>version-to-change</version>
+        </plugin>
+```
 
 ## Important Links
 [SonarQube Server - GitHub Integration](https://docs.sonarsource.com/sonarqube-server/latest/devops-platform-integration/github-integration/introduction/)  
