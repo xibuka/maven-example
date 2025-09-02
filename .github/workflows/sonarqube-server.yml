@@ -49,6 +49,6 @@ jobs:
         run: |
           mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -X \
           -f sonar-scanner-maven/maven-basic/pom.xml \
-          -Dsonar.projectKey=${PROJECT_KEY} \
+          -Dsonar.projectKey=${{ env.PROJECT_KEY }} \
           -Dsonar.projectName="Onboarding Example - GitHub - Maven Example" \
           -Dsonar.projectBaseDir=sonar-scanner-maven/maven-basic/ 
